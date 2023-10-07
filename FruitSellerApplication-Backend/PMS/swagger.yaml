@@ -1,0 +1,73 @@
+openapi: 3.0.0
+info:
+  title: Fruit Seller Application PMS
+  version: 1.0.0
+  description: API for managing products
+
+servers:
+  - url: http://localhost:5004 
+
+paths:
+  /products/health:
+    get:
+      summary: Check service health
+      responses:
+        '200':
+          description: Service is healthy
+        '500':
+          description: Service is not healthy
+
+  /products:
+    get:
+      summary: Get all products
+      responses:
+        '200':
+          description: List of products
+        '500':
+          description: Internal server error
+
+    post:
+      summary: Add a new product
+      responses:
+        '201':
+          description: Product created successfully
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+
+  /products/{productID}:
+    get:
+      summary: Get product by ID
+      responses:
+        '200':
+          description: Product details
+        '404':
+          description: Product not found
+        '500':
+          description: Internal server error
+
+    patch:
+      summary: Update product
+      responses:
+        '200':
+          description: Product updated successfully
+        '400':
+          description: Bad request
+        '404':
+          description: Product not found
+        '500':
+          description: Internal server error
+
+    delete:
+      summary: Delete product
+      responses:
+        '200':
+          description: Product deleted successfully
+        '400':
+          description: Bad request
+        '404':
+          description: Product not found
+        '500':
+          description: Internal server error
+

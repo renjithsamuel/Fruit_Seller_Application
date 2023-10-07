@@ -1,0 +1,70 @@
+.TopNavWrapper{
+    margin: 2vh;
+    padding: 1vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    filter: drop-shadow(1px 0.5px 3px var(--secondary-color));
+}
+.SearchBox{
+    border: 2px solid;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+    padding: 0.5vh;
+}
+
+#searchInp{
+    display: flex;
+    padding-left: 0.3vw;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 11vw;
+    border: 0px solid;
+    font-size: larger;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#searchBarInp::placeholder {
+    color: var(--text-color);
+    opacity: 1;
+}
+
+
+#searchInp:focus{
+    outline: none;
+    width: 12vw;
+    color: var(--text-color);
+}
+
+.TopNavMiddle{
+    font-weight: 600;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.TopNavRight{
+    display: flex;
+}
+
+.notificationsBtn,.cartBtn,.profileBtn{
+    padding: 1vh;
+    margin-right: 0.5vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notificationsBtn:hover,.cartBtn:hover,.profileBtn:hover{
+    cursor: pointer;
+    background-color: var(--primary-hover-color);
+    filter: drop-shadow(1px 0.5px 3px var(--secondary-color));
+}

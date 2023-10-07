@@ -1,0 +1,104 @@
+.AddProductWrapper{
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--popup-cover-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.AddProductBox{
+    width: 60vw;
+    height: max-content;
+    backdrop-filter: blur(10px);    
+    background-color: var(--cover-color);
+    padding: 4vh;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+}
+
+
+.AddProductName{
+    display: flex;
+    width:90%;
+    align-items: center;
+    margin-bottom: 5vh;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.FinalAddProductWrapper{
+    width: 90%;
+    padding: 1vh;
+}
+
+.AddProductInputWrapper{
+    width: 90%;
+    display: flex;
+    padding: 1vh;
+    justify-content: center;
+}
+
+.AddProductInputLeft{
+    width: 40%;
+    font-size: medium;
+    text-align: end;
+}
+
+.AddProductInputRight{
+    width: 70%;
+    text-align: start;
+    margin-left: 1vw;
+}
+
+.RegisterInputs,.loginInp{
+    border: none;
+    padding: 1vh;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-hover-color);
+    width: 100%;
+    margin-right: 1vw;
+    color: var(--text-color);
+}
+
+.RegisterInputs:focus , .RegisterInputs:active{
+    outline: none;
+    background-color: var(--secondary-light-color);
+}
+
+.RegisterInputs::placeholder{
+    color: var(--text-color);
+    opacity: 1;
+}
+
+
+.AddProductBtns{
+    display: flex;
+    margin: 1vh;
+    margin-left:40% ;
+}
+
+
+.submitSignIn{
+    font-size: inherit;
+    color: var(--text-color);
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);    
+    margin-right: 3vw;
+    filter: drop-shadow(1px 2px 2px var(--shadow-color));
+}
+
+.submitSignIn:hover{
+    cursor: pointer;
+    background-color: var(--shadow-color);
+    filter: drop-shadow(1px 0.5px 5px var(--shadow-color));
+}

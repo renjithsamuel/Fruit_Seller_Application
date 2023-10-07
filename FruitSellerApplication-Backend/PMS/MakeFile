@@ -1,0 +1,8 @@
+db-init:
+	psql -c 'CREATE DATABASE "fruit_seller_application_pms"' -U $(user)
+migrationup:
+	migrate -path db/migrations -database "postgres://postgres:Renjusam36-@localhost:5432/fruit_seller_application_pms?sslmode=disable" -verbose up
+migrationdown:
+	migrate -path db/migrations -database "postgres://postgres:Renjusam36-@localhost:5432/fruit_seller_application_pms?sslmode=disable" -verbose down
+
+# migrate -database "postgres://postgres:Renjusam36-@localhost:5432/fruit_seller_application_pms?sslmode=disable"  -path db/migration up

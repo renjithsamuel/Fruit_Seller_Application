@@ -1,0 +1,12 @@
+-> Worker pool mechanism implementation
+-> Test and Review
+-> Unit testing
+-> Test and Review
+
+for folder in tms ems pms cms ums; do
+  cd tms && go run main.go
+  cd ems && go run main.go
+  cd pms && go run main.go
+  cd cms && go run main.go
+  cd ums && go run main.go
+done

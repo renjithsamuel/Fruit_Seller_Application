@@ -1,0 +1,29 @@
+swagger: "2.0"
+info:
+  title: "FruitSellerApplicationTMS"
+  description: "Service managing User Interactions in Fruit Selling Application"
+  version: "0.0.1"
+host: "$(SERVICE_HOST)"
+basePath: /tms
+schemes:
+  - "http"
+securityDefinitions:
+  BasicAuth:
+    type: apiKey
+    in: header
+    name: authorization
+paths:
+  /health:
+    get:
+      tags:
+        - "Health endpoint"
+      summary: "Returns health of service"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Server is alive, db connection is successful"
+        424:
+          description: "Server is alive, db is down"
+        500:
+          description: "Server is alive, db false"

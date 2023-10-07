@@ -1,0 +1,17 @@
+.categoryWrapper{
+    margin: 2vh;
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.categoryWrapper:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+}   

@@ -1,0 +1,49 @@
+.SellerProductPageWrapper{
+    padding: 0.5vh;
+}
+
+.SellerProductPageTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5vh;
+    margin-left: 7vw;
+    margin-right : 7vw;
+    align-items: center;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.FinalSellerProductsWrapper{
+    margin-left: 7vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addProduct{
+    border-radius: var(--border-radius);
+    padding: 1vh;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addProduct:hover{
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    filter: drop-shadow(1px 0.5px 2px var(--shadow-color));
+}
+
+.addProductName{
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addProductImg{
+    margin-left: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

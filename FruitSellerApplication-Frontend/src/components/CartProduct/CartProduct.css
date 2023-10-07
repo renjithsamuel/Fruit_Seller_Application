@@ -1,0 +1,106 @@
+.CartProductWrapper{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh;
+    margin-left: 11vw;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.CartProductWrapper:hover{
+    cursor: pointer;
+    background-color: var(--primary-hover-color);
+    filter: drop-shadow(1px 0.5px 3px var(--secondary-color));
+}
+
+.CartProductImage{
+    width: 15%;
+    object-fit: fill;
+    height: 100%;
+}
+
+.CartProductImage img{
+    float: left;
+    aspect-ratio: 1/1;
+    width:  6vw;
+    border-radius: var(--border-high-radius);
+    /* height: 7vh ; */
+    object-fit: scale-down;
+    mix-blend-mode:darken;
+}
+
+.CartProductDetails1{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.CartProductDetails2{
+    display: flex;
+    flex-direction: column;
+}
+
+.CartProductQuantity , .CartProductTotalPrice , .CartProductModifyQuantity{
+    display: flex;
+    align-items: center;
+    padding: 0.5vh; 
+}
+
+.CartProductTotalPriceName , .CartProductQuantityName {
+    background-color: var(--secondary-light-color);
+    border-radius: var(--border-radius);
+    padding: 0.5vh;
+    margin-right: 0.4vw;
+}
+
+.CartProductLine{
+    height: 80%;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    margin-left: 10%;
+    width: 2px;
+    background-color: var(--border-color);
+    align-self: center;
+    justify-self: center;
+}
+
+.RemoveFromCartBtn{
+    margin-left: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    border-radius: var(--border-radius);
+}
+
+.RemoveFromCartBtn:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    filter: drop-shadow(1px 0.5px 3px var(--secondary-color));
+}
+
+.CartProductDetails3{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.CartProductDecrease,.CartProductIncrease{
+    padding: 0.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-high-radius);
+}
+
+.CartProductIncrease:hover,.CartProductDecrease:hover{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    filter: drop-shadow(1px 0.5px 3px var(--secondary-color));
+}

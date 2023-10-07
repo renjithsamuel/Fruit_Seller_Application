@@ -1,0 +1,26 @@
+.CartPageWrapper{
+    padding: 0.5vh;
+}
+
+.CartPageTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5vw;
+}
+
+.yourCartName,.TotalAmount{
+    margin-top: 3vh;
+    margin-left: 5vw;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.CartItemsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 11vh;
+    margin-right: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}

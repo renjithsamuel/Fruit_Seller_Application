@@ -1,0 +1,27 @@
+.HomePageWrapper{
+    padding: 0.5vh;
+}
+
+.CategoriesName,.productsName{
+    margin-top: 3vh;
+    margin-left: 5vw;
+    font-weight: 600;
+    font-size: larger;
+}
+
+
+.finalProductWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 11vh;
+    margin-right: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.finalCategoriesWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4vh;
+    margin-left: 13vh;
+}

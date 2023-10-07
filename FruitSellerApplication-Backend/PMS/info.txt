@@ -1,0 +1,15 @@
+domain : 
+	GetProduct(id string) (*model.Product, error)
+	AddProduct(product *model.Product) error
+	UpdateProduct(id string, product *model.Product) error
+	DeleteProduct(id string) error
+	ListProducts() ([]*model.Product, error)
+	CheckDBStatus() (bool, error)
+
+handler :
+	AddProductHandler(c *gin.Context)
+	UpdateProductHandler(c *gin.Context)
+	DeleteProductHandler(c *gin.Context)
+	GetProductHandler(c *gin.Context)
+	ListProductsHandler(c *gin.Context)
+	HealthHandler(c *gin.Context)

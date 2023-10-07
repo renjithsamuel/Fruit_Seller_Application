@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: FruitSellerApplicationCMS
+  version: 1.0.0
+  description: API for managing carts
+
+servers:
+  - url: http://localhost:5003 
+
+paths:
+  /carts/health:
+    get:
+      summary: Check service health
+      responses:
+        '200':
+          description: Service is healthy
+        '500':
+          description: Service is not healthy
+
+  /carts/{cartID}:
+    get:
+      summary: Get cart by ID
+      responses:
+        '200':
+          description: Cart details
+        '404':
+          description: Cart not found
+        '500':
+          description: Internal server error
+
+  /carts:
+    post:
+      summary: Add an item to the cart
+      responses:
+        '201':
+          description: Item added to cart
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+
+    put:
+      summary: Update cart item
+      responses:
+        '200':
+          description: Cart item updated
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+
+    delete:
+      summary: Remove an item from the cart
+      parameters:
+        - in: path
+          name: cartID
+          required: true
+          schema:
+            type: string
+        - in: path
+          name: productID
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Item removed from cart
+        '400':
+          description: Bad request
+        '404':
+          description: Cart not found
+        '500':
+          description: Internal server error
+
+    delete:
+      summary: Clear the cart
+      responses:
+        '200':
+          description: Cart cleared
+        '400':
+          description: Bad request
+        '404':
+          description: Cart not found
+        '500':
+          description: Internal server error

@@ -1,0 +1,131 @@
+.SignInWrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.SignInBox{
+    width: 40vw;
+    height: max-content;
+    backdrop-filter: blur(10px);    
+    background-color: var(--cover-color);
+    padding: 4vh;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--border-color);
+}
+
+
+.SignInName{
+    display: flex;
+    width:90%;
+    align-items: center;
+    margin-bottom: 5vh;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+
+.registerInputWrapper,.LoginInputWrapper{
+    width: 90%;
+    display: flex;
+    padding: 1vh;
+}
+
+.registerInputLeft,.loginLeft{
+    width: 40%;
+    font-size: medium;
+    text-align: end;
+}
+
+.registerInputRight,.loginRight{
+    width: 70%;
+    text-align: start;
+    margin-left: 1vw;
+}
+
+.RegisterInputs,.loginInp{
+    border: none;
+    padding: 1vh;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-hover-color);
+    width: 100%;
+    margin-right: 1vw;
+    color: var(--text-color);
+}
+
+.RegisterInputs:focus , .RegisterInputs:active{
+    outline: none;
+    background-color: var(--secondary-light-color);
+}
+
+.RegisterInputs::placeholder{
+    color: var(--text-color);
+    opacity: 1;
+}
+
+
+.submitSignInWrap{
+    margin: 1vh;
+    margin-left:40% ;
+}
+
+
+.submitSignIn{
+    font-size: inherit;
+    color: var(--text-color);
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);    
+    margin-right: 3vw;
+    filter: drop-shadow(1px 2px 2px var(--shadow-color));
+}
+
+.submitSignIn:hover{
+    cursor: pointer;
+    background-color: var(--shadow-color);
+    filter: drop-shadow(1px 0.5px 5px var(--shadow-color));
+}
+
+.AreYouRegistered{
+    margin: 2vh;
+    margin-left: 35%;
+}
+
+.isLoginLink{
+    cursor: pointer;
+    color:blue;
+    text-decoration: underline;
+}
+
+.roleSelectorWrapper,.langSelectorWrapper{
+    display: flex;
+}
+
+.roleSelector1,.langSelector1{
+    padding: 0.7vh;
+    background-color: var(--primary-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px;
+}
+
+.roleSelector2,.langSelector2{
+    padding: 0.7vh;
+    background-color: var(--primary-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px;
+}
+
+.roleSelector1:hover,.roleSelector2:hover ,.langSelector1:hover,.langSelector2:hover{
+    cursor: pointer;
+    background-color: var(--secondary-light-color);
+    filter: drop-shadow(1px 0.5px 5px var(--shadow-color));
+}
+
+

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option go_package = "proto/eventProto";
+
+package eventProto;
+
+service EventService {
+    rpc Publish(PublishRequest) returns (EventResponse);
+    rpc Subscribe(SubscribeRequest) returns ( stream  StreamData);
+}
+
+message PublishRequest {
+    string topic = 1;
+    bytes payload = 2;
+    string appID = 3;
+}
+
+message EventResponse {
+    string message = 1;
+    bool success = 2;
+}
+
+message SubscribeRequest {
+    string topic = 1;
+    string appID = 2;
+}
+
+message StreamData {
+    string topic = 1;
+    bytes payload = 2;
+}
