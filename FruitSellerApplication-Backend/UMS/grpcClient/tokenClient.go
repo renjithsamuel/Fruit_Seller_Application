@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
-	tokenProto "FruitSellerApplicationUMS/proto/userTokenProto"
+	tokenProto "FruitSellerApplicationUMS/Proto/userTokenProto"
 	"time"
 
 	"github.com/cenkalti/backoff"

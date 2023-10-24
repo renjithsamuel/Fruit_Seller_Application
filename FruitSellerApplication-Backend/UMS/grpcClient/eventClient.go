@@ -3,7 +3,7 @@ package grpcClient
 import (
 	"FruitSellerApplicationUMS/domain"
 	"FruitSellerApplicationUMS/model"
-	eventProto "FruitSellerApplicationUMS/proto/eventProto"
+	eventProto "FruitSellerApplicationUMS/Proto/eventProto"
 	"context"
 	"encoding/json"
 	"fmt"
