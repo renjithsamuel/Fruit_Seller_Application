@@ -4,7 +4,6 @@ import (
 	"FruitSellerApplicationTMS/grpcServer"
 	"flag"
 	"fmt"
-	"github.com/joho/godotenv"
 	"log"
 	"os"
 	"os/signal"
@@ -80,9 +79,9 @@ func main() {
 	go handleInterrupts()
 
 	// Getting secret key
-	if err := godotenv.Load(); err != nil {
-		panic(err)
-	}
+	// if err := godotenv.Load(); err != nil {
+	// 	panic(err)
+	// }
 	secretKey := os.Getenv("JWT_SECRET_KEY")
 
 	go func() {

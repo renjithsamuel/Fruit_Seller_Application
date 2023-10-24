@@ -16,7 +16,6 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
@@ -90,9 +89,9 @@ func openDB() (*sql.DB, error) {
 		dbname   = "fruit_seller_application_pms"
 	)
 
-	if err := godotenv.Load(); err != nil {
-		return nil, err
-	}
+	// if err := godotenv.Load(); err != nil {
+	// 	return nil, err
+	// }
 
 	psqlInfo := os.Getenv("POSTGRESSQL_CONN_STRING")
 	if len(psqlInfo) == 0 {

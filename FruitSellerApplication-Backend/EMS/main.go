@@ -14,7 +14,6 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"google.golang.org/grpc"
 )
@@ -90,9 +89,9 @@ func openDB() (*sql.DB, error) {
 		dbname   = "fruit_seller_application_cms"
 	)
 
-	if err := godotenv.Load(); err != nil {
-		panic(err)
-	}
+	// if err := godotenv.Load(); err != nil {
+	// 	panic(err)
+	// }
 
 	psqlInfo := os.Getenv("POSTGRESSQL_CONN_STRING")
 	if len(psqlInfo) == 0 {
