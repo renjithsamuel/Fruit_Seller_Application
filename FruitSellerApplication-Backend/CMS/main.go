@@ -145,17 +145,17 @@ func main() {
 	defer productClient.CloseProductClient()
 
 	var eventClient *grpcClient.EventServiceClient
-	go func() {
-		eventClient, err = grpcClient.NewEventServiceClient(cartService)
-		if err != nil {
-			log.Println("authClient Error:", err)
-			return
-		}
-		if err := eventClient.SubscribeToUserCreated(); err != nil {
-			log.Println("Event Client Error:", err)
-			retrySubscription(eventClient)
-		}
-	}()
+	// go func() {
+	eventClient, err = grpcClient.NewEventServiceClient(cartService)
+	if err != nil {
+		log.Println("authClient Error:", err)
+		return
+	}
+	// 	if err := eventClient.SubscribeToUserCreated(); err != nil {
+	// 		log.Println("Event Client Error:", err)
+	// 		retrySubscription(eventClient)
+	// 	}
+	// }()
 	defer eventClient.CloseEventClient()
 
 	middleware := middleware.NewMiddleware(authClient, productClient)

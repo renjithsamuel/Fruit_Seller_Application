@@ -139,7 +139,7 @@ func main() {
 	eventClient, err = grpcClient.NewEventServiceClient(userService)
 	if err != nil {
 		log.Println("authClient Error:", err)
-		// return
+		return
 	}
 	// 	if err := eventClient.SubscribeToCartCreated(); err != nil {
 	// 		log.Println("Event Client Error:", err)
