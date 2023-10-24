@@ -48,7 +48,7 @@ func NewProductServiceClient() (*ProductServiceClient, error) {
 }
 
 func createProductClient() (productProto.ProductServiceClient, *grpc.ClientConn, error) {
-	productConn, err := grpc.Dial("localhost:50041", grpc.WithInsecure())
+	productConn, err := grpc.Dial("https://fruitseller-go-pms.onrender.com:50041", grpc.WithInsecure())
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to connect to PMS: %v", err)
 	}

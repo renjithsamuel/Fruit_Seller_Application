@@ -49,7 +49,7 @@ func NewTokenServiceClient() (*TokenServiceClient, error) {
 }
 
 func createTokenClient() (tokenProto.TokenGrpcServiceClient, *grpc.ClientConn, error) {
-	tokenConn, err := grpc.Dial("localhost:50021", grpc.WithInsecure())
+	tokenConn, err := grpc.Dial("https://fruitseller-go-tms.onrender.com:50021", grpc.WithInsecure())
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to connect to TMS: %v", err)
 	}
