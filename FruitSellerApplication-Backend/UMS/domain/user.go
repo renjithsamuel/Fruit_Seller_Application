@@ -45,9 +45,20 @@ var (
 func (ts *UserService) GetUser(userID string) (*model.UserGetResponse, error) {
 	// initializing the user model
 	user := model.UserGetResponse{}
-	sqlStatement := `SELECT "name","dateOfBirth","role","email","phoneNumber","preferredLanguage",
-	"address","country","createdAtUTC","updatedAtUTC","cartID" FROM "users" WHERE "userID"=$1`
-	if err := ts.db.QueryRow(sqlStatement, userID).Scan(&user.Name, &user.DateOfBirth, &user.Role, &user.Email, &user.PhoneNumber, &user.PreferredLanguage, &user.Address, &user.Country, &user.CreatedAtUTC, &user.UpdatedAtUTC, &user.CartID); err != nil {
+	sqlStatement := `SELECT "userID",
+							"name", 
+							"dateOfBirth",
+							"role",
+							"email",
+							"phoneNumber",
+							"preferredLanguage",
+							"address",
+							"country",
+							"createdAtUTC",
+							"updatedAtUTC",
+							"cartID" 
+					    FROM "users" WHERE "userID"=$1`
+	if err := ts.db.QueryRow(sqlStatement, userID).Scan(&user.UserID, &user.Name, &user.DateOfBirth, &user.Role, &user.Email, &user.PhoneNumber, &user.PreferredLanguage, &user.Address, &user.Country, &user.CreatedAtUTC, &user.UpdatedAtUTC, &user.CartID); err != nil {
 		if errors.Is(sql.ErrNoRows, err) {
 			return nil, ErrUserNotFound
 		}

@@ -1,48 +1,40 @@
-# FruitsBasket - A Fruit Seller Application
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-FruitsBasket is a modern web application built with Next.js, TypeScript, Material-UI (MUI), React Query, and Formik. This application is designed for fruit sellers and buyers, providing a seamless and user-friendly experience for managing and purchasing fruits.
+## Getting Started
 
-## Overview
+First, run the development server:
 
-Here are some key features and functionalities of FruitsBasket:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Seller Mode
-- **Product Management**: Sellers can add new fruits, update existing product information, and keep their product listings up to date.
-- **Authentication**: User authentication for sellers to access the seller mode securely.
-- **User Profile**: Sellers can manage their profiles, including information such as their store details and contact information.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Buyer Mode
-- **Browse Fruits**: Buyers can view a wide variety of fruits available from different sellers.
-- **Add to Cart**: Easily add fruits to the cart for a convenient shopping experience.
-- **User Profile**: Buyers can update their user information and preferences.
-- **Authentication**: User authentication for buyers, ensuring a secure shopping experience.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-### Shared Functionality
-- **Responsive Design**: FruitsBasket is designed to be responsive, ensuring a smooth experience on various devices.
-- **User-Friendly Interface**: The application provides an intuitive and user-friendly design for both sellers and buyers.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-## Screenshots
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-![FruitsBasket3](https://i.ibb.co/1KB04qT/fruits-Basket2.png)
-![FruitsBasket1](https://i.ibb.co/0jKVHkS/fruits-Basket4.png)
-![FruitsBasket4](https://i.ibb.co/K0wy3rY/fruits-Basket1.png)
-![FruitsBasket2](https://i.ibb.co/nkkWrk1/fruits-Basket3.png)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Technologies Used
+## Learn More
 
-FruitsBasket is built with the following technologies:
+To learn more about Next.js, take a look at the following resources:
 
-- **Frontend**: Next.js, TypeScript, Material-UI (MUI), React Query, Formik
-- **Backend**: Go lang
-- **Database**: postgreSql
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Credits
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-This project was created by RenjithSamuel.
+## Deploy on Vercel
 
-## License
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-This project is licensed under the [Your License Name] - see the [LICENSE.md](LICENSE.md) file for details.
-
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

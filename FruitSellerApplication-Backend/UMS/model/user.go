@@ -20,6 +20,7 @@ type UserLoginRequest struct {
 }
 
 type UserGetResponse struct {
+	UserID            string    `json:"userID"`
 	Name              string    `json:"name"`
 	DateOfBirth       time.Time `json:"dateOfBirth"`
 	Role              string    `json:"role"`

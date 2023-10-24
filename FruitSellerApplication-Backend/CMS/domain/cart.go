@@ -42,31 +42,31 @@ var (
 
 func (s *CartService) AddToCart(request *model.AddToCartRequest) error {
 	// update the total cost of the application is pending
-	sqlStatement := `SELECT COUNT(*) FROM "cart_items" WHERE "cartID" = $1 AND "productID" = $2`
-	var count int
-	err := s.db.QueryRow(sqlStatement, request.CartID, request.ProductID).Scan(&count)
-	if err != nil {
-		log.Println("[Error:AddToCart]:", err.Error())
-		return ErrCartCreation
-	}
+	// sqlStatement := `SELECT COUNT(*) FROM "cart_items" WHERE "cartID" = $1 AND "productID" = $2`
+	// var count int
+	// err := s.db.QueryRow(sqlStatement, request.CartID, request.ProductID).Scan(&count)
+	// if err != nil {
+	// 	log.Println("[Error:AddToCart]:", err.Error())
+	// 	return ErrCartCreation
+	// }
 
-	if count > 0 {
-		// Update the quantity
-		sqlStatement = `UPDATE "cart_items" SET quantity = quantity + $1 WHERE "cartID" = $2 AND "productID" = $3`
-		_, err := s.db.Exec(sqlStatement, request.Quantity, request.CartID, request.ProductID)
-		if err != nil {
-			log.Println("[Error:AddToCart]:", err.Error())
-			return ErrCartCreation
-		}
-	} else {
+	// if count > 0 {
+	// 	// Update the quantity
+	// 	sqlStatement = `UPDATE "cart_items" SET quantity = quantity + $1 WHERE "cartID" = $2 AND "productID" = $3`
+	// 	_, err := s.db.Exec(sqlStatement, request.Quantity, request.CartID, request.ProductID)
+	// 	if err != nil {
+	// 		log.Println("[Error:AddToCart]:", err.Error())
+	// 		return ErrCartCreation
+	// 	}
+	// } else {
 		// Insert a new cart item
-		sqlStatement = `INSERT INTO "cart_items" ("cartID", "productID", "quantity") VALUES ($1, $2, $3)`
+		sqlStatement := `INSERT INTO "cart_items" ("cartID", "productID", "quantity") VALUES ($1, $2, $3)`
 		_, err := s.db.Exec(sqlStatement, request.CartID, request.ProductID, request.Quantity)
 		if err != nil {
 			log.Println("[Error:AddToCart]:", err.Error())
 			return ErrCartCreation
 		}
-	}
+	// }
 
 	return nil
 }
