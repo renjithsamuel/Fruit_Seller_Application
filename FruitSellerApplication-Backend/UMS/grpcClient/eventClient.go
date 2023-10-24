@@ -3,11 +3,11 @@ package grpcClient
 import (
 	"FruitSellerApplicationUMS/domain"
 	"FruitSellerApplicationUMS/model"
+	eventProto "FruitSellerApplicationUMS/proto/eventProto"
 	"context"
 	"encoding/json"
 	"fmt"
 	"log"
-	eventProto "proto/eventProto"
 	"time"
 
 	"google.golang.org/grpc"

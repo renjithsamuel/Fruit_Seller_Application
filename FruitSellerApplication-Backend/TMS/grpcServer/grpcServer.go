@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc"
 	"log"
 	"net"
-	tokenGrpcService "proto/userTokenProto"
+	tokenGrpcService "FruitSellerApplicationTMS/Proto/userTokenProto"
 )
 
 type GrpcAuthServer struct {

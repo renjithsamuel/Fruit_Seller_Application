@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+option go_package = "proto/productProto";
+
+package productProto;
+
+service ProductService {
+    rpc GetProducts(GetProductsRequest) returns (GetProductsResponse);
+    rpc GetProductById(GetProductByIdRequest) returns (ProductResponse);
+    rpc AddProduct(AddProductRequest) returns (MessageResponse);
+    rpc UpdateProduct(UpdateProductRequest) returns (MessageResponse);
+    rpc RemoveProduct(RemoveProductRequest) returns (MessageResponse); 
+}
+
+message ProductResponse {
+    string productID = 1;
+    string productName = 2;
+    string description = 3;
+    float price = 4;
+    string sellerID = 5;
+    int32 stockQuantity = 6;
+    string category = 7;
+    string imageUrl = 8;
+    string createdAtUTC = 9;
+    string updatedATUTC = 10;
+}
+
+message GetProductsRequest {
+    // null
+}
+
+message GetProductsResponse {
+    repeated ProductResponse products = 1;
+    int32 count = 2;
+}
+
+message GetProductByIdRequest {
+    string productID = 1;
+}
+
+message AddProductRequest {
+    string productName = 1;
+    string description = 2;
+    float price = 3;
+    string sellerID = 4;
+    int32 stockQuantity = 5;
+    string category = 6;
+    string imageUrl = 7;
+}
+
+message MessageResponse {
+    string message = 1;
+    bool success = 2;
+}
+
+message UpdateProductRequest{
+    string productID = 1;
+    string productName = 2;
+    string description = 3;
+    float price = 4;
+    string sellerID = 5;
+    int32 stockQuantity = 6;
+    string category = 7;
+    string imageUrl = 8;
+}
+
+message RemoveProductRequest {
+    string productID = 1;
+    string sellerID = 2;
+}

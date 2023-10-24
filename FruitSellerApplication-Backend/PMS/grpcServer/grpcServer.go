@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net"
-	proto "proto/productProto"
+	proto "FruitSellerApplicationPMS/Proto/productProto"
 
 	validator "github.com/go-playground/validator/v10"
 	"google.golang.org/grpc"

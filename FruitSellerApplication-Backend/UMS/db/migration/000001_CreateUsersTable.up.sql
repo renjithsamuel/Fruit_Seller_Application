@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS "users" (
 );
 
 CREATE TABLE IF NOT EXISTS "event_table" (
-    "eventID" (UUID) DEFAULT uuid_generate_v4() NOT NULL PRIMARY KEY,
+    "eventID" UUID DEFAULT uuid_generate_v4() NOT NULL PRIMARY KEY,
     "topic" TEXT NOT NULL,
     "payload" JSONB NOT NULL,
     "appID" TEXT NOT NULL,

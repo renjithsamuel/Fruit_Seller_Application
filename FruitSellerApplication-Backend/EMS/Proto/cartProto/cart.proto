@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+option go_package = "proto/cartProto";
+
+package cartProto;
+
+service CartService {
+    rpc AddToCart(AddToCartRequest) returns (Cart);
+    rpc RemoveFromCart(RemoveFromCartRequest) returns (Cart);
+    rpc GetCart(GetCartRequest) returns (GetCartResponse);
+    rpc ClearCart(ClearCartRequest) returns (Cart);
+    rpc UpdateCartItem(UpdateCartItemRequest) returns (Cart);
+    rpc DeleteUserAction(DeleteUserActionRequest) returns (Cart);
+}
+
+
+message AddToCartRequest {
+    string cartID = 1;
+    string productID = 2;
+    int32 quantity = 3;
+}
+
+message RemoveFromCartRequest {
+    string cartID = 1;
+    string productID = 2;
+}
+
+message GetCartRequest {
+    string cartID = 1;
+}
+
+message ClearCartRequest {
+    string cartID = 1;
+}
+
+message UpdateCartItemRequest {
+    string cartID = 1;
+    string productID = 2;
+    int32 quantity = 3;
+}
+
+message CartItem {
+    string productID = 1;
+    int32 quantity = 2;
+}
+
+message Cart {
+    string message = 1;
+    bool success  = 2;
+}
+
+message GetCartResponse {
+    string cartID = 1;
+    repeated CartItem items = 2;
+    string message = 3;
+    bool success  = 4;
+}
+
+
+message EventRequest {
+    string topic = 1;
+    string data = 2;
+    string status = 3;
+    string appID = 4;
+}
+
+message EventResponse {
+    string message = 1;
+    bool success = 2;
+}
+
+message DeleteUserActionRequest {
+    string cartID = 1;
+}

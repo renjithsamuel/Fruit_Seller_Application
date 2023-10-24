@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/status"
 	"log"
 	"net"
-	proto "proto/cartProto"
+	proto "FruitSellerApplicationCMS/Proto/cartProto"
 )
 
 func (s *CartGrpcServer) AddToCart(ctx context.Context, req *proto.AddToCartRequest) (*proto.Cart, error) {

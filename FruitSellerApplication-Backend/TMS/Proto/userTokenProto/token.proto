@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "proto/userTokenProto";
+
+package userTokenProto;
+
+service TokenGrpcService {
+    rpc VerifyToken(VerifyTokenRequest) returns (VerifyTokenResponse);
+    rpc GenerateToken(GenerateTokenRequest) returns (GenerateTokenResponse);
+} 
+
+// verify tokens
+message VerifyTokenRequest {
+    string token = 1;
+}
+
+message VerifyTokenResponse {
+    string userID = 1;
+    bool success = 2;
+    string message = 3;
+}
+
+// generate tokens
+message GenerateTokenRequest {
+    string userID = 1;
+}
+
+message GenerateTokenResponse {
+    string token = 1;
+    bool success = 2;
+    string message = 3;
+}

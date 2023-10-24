@@ -1,13 +1,13 @@
 package grpcClient
 
 import (
+	eventProto "FruitSellerApplicationCMS/Proto/eventProto"
 	"FruitSellerApplicationCMS/domain"
 	"FruitSellerApplicationCMS/model"
 	"context"
 	"encoding/json"
 	"fmt"
 	"log"
-	eventProto "proto/eventProto"
 	"time"
 
 	"google.golang.org/grpc"
@@ -74,7 +74,7 @@ func (c *EventServiceClient) PublishCartCreated(cartID string, userID string) {
 	}
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
-	
+
 	if c.EventClient == nil {
 		log.Println("EventClient is nil. Cannot publish event.")
 		return

@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	productProto "proto/productProto"
+	productProto "FruitSellerApplicationCMS/Proto/productProto"
 
 	"github.com/cenkalti/backoff"
 	"google.golang.org/grpc"

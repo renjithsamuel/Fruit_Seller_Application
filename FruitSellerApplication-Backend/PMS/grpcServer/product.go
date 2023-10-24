@@ -6,7 +6,7 @@ import (
 	"FruitSellerApplicationPMS/model"
 	"context"
 	"errors"
-	proto "proto/productProto"
+	proto "FruitSellerApplicationPMS/Proto/productProto"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

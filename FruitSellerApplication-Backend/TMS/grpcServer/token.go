@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	tokenGrpcService "proto/userTokenProto"
+	tokenGrpcService "FruitSellerApplicationTMS/Proto/userTokenProto"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"

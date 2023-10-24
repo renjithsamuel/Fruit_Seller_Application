@@ -3,7 +3,7 @@ package grpcServer
 import (
 	"FruitSellerApplicationCMS/domain"
 	"github.com/go-playground/validator/v10"
-	proto "proto/cartProto"
+	proto "FruitSellerApplicationCMS/Proto/cartProto"
 )
 
 var (

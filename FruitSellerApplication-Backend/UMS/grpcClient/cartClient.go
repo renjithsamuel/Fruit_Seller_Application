@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
-	cartProto "proto/cartProto"
+	cartProto "FruitSellerApplicationUMS/proto/cartProto"
 	"time"
 
 	"github.com/cenkalti/backoff"
