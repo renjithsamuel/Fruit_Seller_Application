@@ -49,7 +49,7 @@ func NewCartServiceClient() (*CartServiceClient, error) {
 }
 
 func createCartClient() (cartProto.CartServiceClient, *grpc.ClientConn, error) {
-	cartConn, err := grpc.Dial("https://fruitseller-go-cms.onrender.com:50031", grpc.WithInsecure())
+	cartConn, err := grpc.Dial("fruitseller-go-cms.onrender.com:50031", grpc.WithInsecure())
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to connect to TMS: %v", err)
 	}

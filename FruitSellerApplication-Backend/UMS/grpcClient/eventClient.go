@@ -50,7 +50,7 @@ func NewEventServiceClient(domain domain.Service) (*EventServiceClient, error) {
 }
 
 func createEventClient() (eventProto.EventServiceClient, *grpc.ClientConn, error) {
-	eventConn, err := grpc.Dial("https://fruitseller-go-ems.onrender.com:50051", grpc.WithInsecure())
+	eventConn, err := grpc.Dial("fruitseller-go-ems.onrender.com:50051", grpc.WithInsecure())
 	if err != nil {
 		return nil, nil, fmt.Errorf("failed to connect to EMS: %v", err)
 	}
